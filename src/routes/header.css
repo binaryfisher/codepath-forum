@@ -1,0 +1,21 @@
+.header{
+    width: 100%;
+    background-color: #1a1b24;
+    color: #f8f8f2;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+.header-title{
+    font-weight: 900;
+}
+.links{
+    display: flex;
+    gap: 20px;
+    font-weight: 100;
+    justify-content: center;
+    align-items: center;
+}
