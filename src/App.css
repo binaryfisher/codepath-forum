@@ -1,4 +1,9 @@
-
+.App{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+  overflow-y: auto;
+}
 
 .logo {
   height: 6em;

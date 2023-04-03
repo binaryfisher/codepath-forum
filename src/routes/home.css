@@ -1,0 +1,39 @@
+.home{
+    color: white;
+    width:80vw;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+
+}
+
+.order-filter-panel{
+    width: 100%;
+    
+}
+
+button{
+    margin: 5px;
+}
+
+.selected{
+    color:#ff79c6;
+    text-decoration: underline;
+     text-underline-offset: 7px;
+}
+
+
+
+
+
+.home-post-lines-container{
+  
+    width:80vw;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}

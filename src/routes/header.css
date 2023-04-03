@@ -1,12 +1,15 @@
 .header{
     width: 100%;
-    background-color: #1a1b24;
+    position: fixed;
+    top:0;
+    background-color: #282a36 ;
     color: #f8f8f2;
     height: 60px;
     display: flex;
     align-items: center;
     flex-direction: row;
     justify-content: space-around;
+    box-shadow: 2px 2px 5px 2px #1b1c24;
     
 }
 .header-title{

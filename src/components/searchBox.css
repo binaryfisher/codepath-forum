@@ -1,0 +1,42 @@
+
+.search-box{
+   width: 220px;
+}
+
+
+.input-box{
+    background-color: #282a36;
+    height: 30px;
+    color: white;
+    font-weight: 700;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+}
+.input-container{
+    border: 2px solid white;
+    background-color: #282a36;
+    border-radius: 8px;
+    height: 33px;
+    display: flex;
+}
+
+.icon-container{
+    background-color: #282a36;
+    padding: 3px;
+    border-radius: 8px;
+   
+   
+}
+
+.result-container{
+
+    width: 220px;
+    display: none;
+    background-color: #282a36;
+    height: 150px;
+    position: fixed;
+    margin-top: 5px 
+    
+}
+
