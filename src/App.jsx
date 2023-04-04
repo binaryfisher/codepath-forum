@@ -4,6 +4,7 @@ import './App.css'
 import CreatePost from './routes/CreatePost'
 import Header from './routes/Header'
 import Home from './routes/Home'
+import Post from './routes/Post'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,6 +20,11 @@ function App() {
            <Route path="/" element={<Header />} >
               <Route path='/createpost' element={<CreatePost />} />
            </Route>
+
+           <Route path="/" element={<Header />} >
+              <Route path='/post1' element={<Post />} />
+           </Route>
+
         </Routes>
       </BrowserRouter>
     
