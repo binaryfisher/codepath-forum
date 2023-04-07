@@ -1,6 +1,10 @@
 import "./form.css"
+import { supabase } from "../client";
 
 const ForumForm = ({btnTxt, handleFormBtn}) =>{
+
+ 
+
     return(
         <>
         <form>

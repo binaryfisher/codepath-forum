@@ -1,10 +1,21 @@
 import { BrowserRouter, Routes, Route, Link, Outlet } from 'react-router-dom'
 import "./home.css"
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import PostLine from '../components/PostLine'
+import { supabase } from "../client";
 
 const Home = () =>{
 
+    const [allPosts, setAllPosts] = useState([{
+        id:"",
+        created_at:"",
+        title:"",
+        content:"",      
+        img_url:"",
+        upvotes:0,
+        comments:[]
+    }]);
+    
     const[orderBy, setOrderBy] = useState("");
    
     const handleBtnClick = (event) =>{
@@ -19,6 +30,20 @@ const Home = () =>{
        
     }
 
+    useEffect(() =>{
+        const fetchData = async()=>{
+            const {data} = await supabase
+                .from("posts")
+                .select()
+                .order("created_at", {ascending:true});
+            setAllPosts(data);
+        }
+
+       fetchData();
+  
+
+    },[])
+
     
    
     return(
@@ -30,14 +55,19 @@ const Home = () =>{
             </div>
 
             <div className='home-post-lines-container'>
-                <PostLine />
-                <PostLine />
-                <PostLine />
-                <PostLine />
-                <PostLine />
-                <PostLine />
-                <PostLine />
+              
+               {allPosts.length > 0 && allPosts[0].id != "" ? (
+                 allPosts.map((post, index)=>(
+                    
+                    <PostLine  postId={post.id} postTime={post.created_at} postTitle={post.title} upvotes={post.upvotes} />
+               
+                    ))
+                ):(null)
 
+              }
+
+
+                
             </div>
 
         </div>

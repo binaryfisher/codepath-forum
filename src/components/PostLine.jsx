@@ -1,12 +1,12 @@
 import "./postLine.css"
 import { Link } from "react-router-dom";
-const PostLine = () =>{
+const PostLine = ({postId,postTime, postTitle, upvotes}) =>{
 
     return(
         <div className="post-line">
-            <div className="post-time">3 days ago</div>         
-            <div className="post-title"><Link to="/post1"> This is the title</Link> </div>
-            <div className="post-upvotes">5 upvotes</div>
+            <div className="post-time">{postTime}</div>         
+            <div className="post-title"><Link to={"/post/" + postId}>{postTitle} </Link> </div>
+            <div className="post-upvotes">{upvotes + " upvotes"}</div>
           
             
         </div>

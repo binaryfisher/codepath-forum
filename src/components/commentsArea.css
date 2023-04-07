@@ -5,14 +5,28 @@
     padding: 5px;
 }
 .comment-input{
-    width: 98%;
+    width: 95%;
     border-radius: 8px;
     color: rgb(228, 222, 222);
     outline: none;
-    border: rgb(102, 97, 97) solid 1px;
-    margin: 16px 0;
+    border: none;
+    /* margin: 16px 0; */
     background-color: inherit;
     resize: none;
+}
+.comment-input-container{
+    display: flex;
+    flex-direction: row;
+    border: rgb(102, 97, 97) solid 1px;
+    margin: 12px 0px;
+    border-radius: 5px;
+    justify-content: space-between;
+    padding-right: 8px;
+    align-items: center;
+}
+
+.comment-icon{
+    cursor: pointer;
 }
 .comment{
 

@@ -23,7 +23,7 @@ function App() {
            </Route>
 
            <Route path="/" element={<Header />} >
-              <Route path='/post1' element={<Post />} />
+              <Route path='/post/:id' element={<Post />} />
            </Route>
 
            <Route path="/" element={<Header />} >
