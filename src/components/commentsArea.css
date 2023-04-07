@@ -1,0 +1,21 @@
+.comments-area{
+    margin-top: 18px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 4px 1px rgb(167, 160, 160);
+    padding: 5px;
+}
+.comment-input{
+    width: 98%;
+    border-radius: 8px;
+    color: rgb(228, 222, 222);
+    outline: none;
+    border: rgb(102, 97, 97) solid 1px;
+    margin: 16px 0;
+    background-color: inherit;
+    resize: none;
+}
+.comment{
+
+    font-size: 0.8em;
+
+}

@@ -1,0 +1,16 @@
+.post-img-container{
+    
+    margin-top: 16px;
+    width:160px;
+    height: 120px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 4px 1px rgb(167, 160, 160);
+
+}
+
+.post-img{
+    width:160px;
+    height: 120px;
+    border-radius: 8px;
+    object-fit: cover;
+}

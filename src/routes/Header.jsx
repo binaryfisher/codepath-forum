@@ -10,12 +10,12 @@ const Header = () =>{
     return (
         <>
           <div className="header">
-            <div className="header-title">xxxHub</div>
+            <div className="header-title">Book Hub</div>
 
             <SearchBox />
            
             <div className="links">
-                <Link to='/home'>Home</Link>
+                <Link to='/'>Home</Link>
                 <Link to='/createpost'>Create New Post</Link>
             </div>
 

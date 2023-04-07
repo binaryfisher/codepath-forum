@@ -5,6 +5,7 @@ import CreatePost from './routes/CreatePost'
 import Header from './routes/Header'
 import Home from './routes/Home'
 import Post from './routes/Post'
+import EditPost from './routes/EditPost'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -13,8 +14,8 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-           <Route path="/" element={<Header />} >
-              <Route path='/home' index={true} element={<Home />} />
+           <Route path="/" index={false} element={<Header />} >
+              <Route path='/' index={true} element={<Home />} />
            </Route>
 
            <Route path="/" element={<Header />} >
@@ -24,6 +25,11 @@ function App() {
            <Route path="/" element={<Header />} >
               <Route path='/post1' element={<Post />} />
            </Route>
+
+           <Route path="/" element={<Header />} >
+              <Route path='/post1/edit' element={<EditPost />} />
+           </Route>
+
 
         </Routes>
       </BrowserRouter>

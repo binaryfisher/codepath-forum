@@ -1,0 +1,25 @@
+
+input, textarea{
+    width: 100%;
+    border-radius: 8px;
+    color: rgb(228, 222, 222);
+    outline: none;
+    border: none;
+    background-color: #1f212b;
+    resize: none;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+   
+}
+
+input{
+    height: 26px;
+}
+
+.form-btn:hover{
+    color:#ff79c6;
+    text-decoration: none;
+}
