@@ -28,15 +28,19 @@ const SearchBox = ({dataToBeSearched}) => {
         
       }
 
-      const handleInputBoxFocus = (event)=>{
-         // event.target.style.display = "none";
-      }   
+      const handleInputBoxFocusOut = (event)=>{
+         resultContainer.style.display = "none";
+      }
+      
+      const handleInputBoxFocus = ()=>{
+         // resultContainer.style.display = "block";
+      }
 
     return(
        <div className='search-box'>
          
          <div className="input-container">
-            <input className='input-box' onFocus={handleInputBoxFocus} onInput={handleInputChange}></input>
+            <input className='input-box'  onInput={handleInputChange}></input>
             <div className="icon-container"><AiOutlineSearch /></div>
          </div>
           <div className='result-container'>

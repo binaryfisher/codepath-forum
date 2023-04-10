@@ -2,9 +2,12 @@ import React from "react";
 import { supabase } from "../client";
 import "./createPost.css"
 import Form from "../components/ForumFrom";
+import { useNavigate } from "react-router-dom";
 
 
 const CreatePost = () =>{
+
+    const navigate = useNavigate();
    
     const handleFormBtn = async (event) =>{
 
@@ -14,9 +17,10 @@ const CreatePost = () =>{
         const imgUrl = document.getElementById("imgUrl").value;
         if(title && title.trim()){
             await supabase
-            .from('posts')
-            .insert({title: title, content:content, img_url: imgUrl});
-            alert(title + " has been created!")
+                .from('posts')
+                .insert({title: title, content:content, img_url: imgUrl});
+                alert(title + " has been created!");
+            navigate("/")
 
         }else{
             alert("A title must be provided to create a post!")
