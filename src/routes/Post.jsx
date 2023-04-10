@@ -119,7 +119,7 @@ const Post = () =>{
            
        </div>
 
-       <CommentsArea comments={post.comments}/>
+       <CommentsArea postId={post.id} comments={post.comments}/>
       </div>
     )
 }
