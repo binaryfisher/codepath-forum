@@ -27,7 +27,7 @@ function App() {
            </Route>
 
            <Route path="/" element={<Header />} >
-              <Route path='/post1/edit' element={<EditPost />} />
+              <Route path='/post/:id/edit' element={<EditPost />} />
            </Route>
 
 
