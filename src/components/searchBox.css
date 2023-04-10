@@ -33,12 +33,20 @@
 
 .result-container{
 
-    width: 220px;
+    width: 210px;
     display: none;
-    background-color: #282a36;
-    height: 150px;
+    background-color: rgb(29, 26, 26);
+    opacity: 0.8;
+    color: white;
+   
+    border-radius: 8px;
+    padding: 5px;
+    min-height: 20px;
     position: fixed;
     margin-top: 5px 
     
 }
 
+/* .search-box-result-url{
+    color: black;
+} */

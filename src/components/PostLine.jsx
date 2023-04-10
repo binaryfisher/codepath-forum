@@ -6,12 +6,16 @@ const PostLine = ({postId,postTime, postTitle, upvotes}) =>{
     const now = Date.now();
     const days = (now - postedDate.getTime())/86400000;
     const getPostedDateString = () =>{
-        if(days <= 0.0417){
+        if(Math.floor(days*24*60) < 2){
+            let postedDateString = " just now";
+            return postedDateString;
+        }
+        else if(days <= 0.0417){
            let postedDateString = Math.floor(days*24*60) + " minutes ago";
            return postedDateString;
         }else if(days > 0.0417 && days < 1){
 
-            let postedDateString = days*24 + " hours ago";
+            let postedDateString = Math.floor(days*24)  + " hours ago";
             return postedDateString;
 
         }
@@ -32,6 +36,7 @@ const PostLine = ({postId,postTime, postTitle, upvotes}) =>{
             let postedDateString = "Posted more than 1 month ago"
         }
     }
+    
     return(
         <div className="post-line">
             <div className="post-time">{"Posted " + getPostedDateString()}</div>         

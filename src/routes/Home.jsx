@@ -73,7 +73,7 @@ const Home = () =>{
                {allPosts.length > 0 && allPosts[0].id != "" ? (
                  allPosts.map((post, index)=>(
                     
-                    <PostLine  postId={post.id} postTime={post.created_at} postTitle={post.title} upvotes={post.upvotes} />
+                    <PostLine key={index} postId={post.id} postTime={post.created_at} postTitle={post.title} upvotes={post.upvotes} />
                
                     ))
                 ):(null)
