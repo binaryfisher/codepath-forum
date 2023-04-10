@@ -15,8 +15,10 @@ const Home = () =>{
         upvotes:0,
         comments:[]
     }]);
+
+   
     
-    const[orderBy, setOrderBy] = useState("");
+    const[orderBy, setOrderBy] = useState("Newest");
    
     const handleBtnClick = (event) =>{
 
@@ -32,17 +34,29 @@ const Home = () =>{
 
     useEffect(() =>{
         const fetchData = async()=>{
-            const {data} = await supabase
-                .from("posts")
-                .select()
-                .order("created_at", {ascending:true});
-            setAllPosts(data);
+            if(orderBy == "Newest"){
+                const {data} = await supabase
+                    .from("posts")
+                    .select()
+                    .order("created_at", {ascending:false});
+                setAllPosts(data);
+
+           }
+           if(orderBy == "Most Popular"){
+                const {data} = await supabase
+                    .from("posts")
+                    .select()
+                    .order("upvotes", {ascending:false});
+                setAllPosts(data);
+
+           }
+          
         }
 
        fetchData();
   
 
-    },[])
+    },[orderBy])
 
     
    
@@ -50,8 +64,8 @@ const Home = () =>{
         <div className="home">
             <div className='order-filter-panel'>
                 Order By:
-                <button onClick={handleBtnClick}>Newest</button>
-                <button onClick={handleBtnClick}>Most Popular</button>
+                <button id='newestBtn' className='selected' onClick={handleBtnClick}>Newest</button>
+                <button id='popularBtn' onClick={handleBtnClick}>Most Popular</button>
             </div>
 
             <div className='home-post-lines-container'>
@@ -65,9 +79,7 @@ const Home = () =>{
                 ):(null)
 
               }
-
-
-                
+               
             </div>
 
         </div>

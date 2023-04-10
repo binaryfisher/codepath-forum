@@ -12,11 +12,17 @@ const CreatePost = () =>{
         const title = document.getElementById("title").value;
         const content = document.getElementById("content").value;
         const imgUrl = document.getElementById("imgUrl").value;
-        await supabase
-        .from('posts')
-        .insert({title: title, content:content, img_url: imgUrl});
-        
-        alert(title + "has been created!")
+        if(title && title.trim()){
+            await supabase
+            .from('posts')
+            .insert({title: title, content:content, img_url: imgUrl});
+            alert(title + " has been created!")
+
+        }else{
+            alert("A title must be provided to create a post!")
+        }
+              
+       
     }
 
     return(
