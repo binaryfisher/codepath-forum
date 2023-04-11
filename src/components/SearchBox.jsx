@@ -16,7 +16,7 @@ const SearchBox = ({dataToBeSearched}) => {
          if(inputString.trim()){
             resultContainer.style.display = "block";
             dataToBeSearched.forEach(element => {
-               if( element.title.trim().startsWith(inputString)){
+               if( element.title.trim().toUpperCase().startsWith(inputString.trim().toUpperCase())){
                result.push({title:element.title,url:"/post/" + element.id})
                }
          });
